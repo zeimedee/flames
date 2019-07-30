@@ -56,6 +56,8 @@ function App() {
              default: 
              SetResult('NO MATCH!');
            }
+           console.log(result);
+           
           
       }else{
         console.log('empty fields');
@@ -77,38 +79,38 @@ function App() {
   return (
     <div>
     <Navi/>
-      <div style={{paddingTop: '100px' }}>
-              <div className='container mx-auto px-48'>
-                <form onSubmit={handleSubmit}>
-                  <input
-                  className='bg-white focus:outline-0 focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal'
-                    type='text'
-                    placeholder='HIM'
-                    value={him}
-                    onChange={e => SetHim(e.target.value)}
+      <div style={{paddingTop: '100px'}}>
+            
+          <div className="w-full max-w-xs" id='free'>
+            <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={handleSubmit}>
+                <div className="mb-4"> 
+                  <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  
+                  type='text' 
+                  placeholder="His name"
+                  value={him}
+                  onChange={e => SetHim(e.target.value)}
                   />
-                  <input
-                  className='bg-white focus:outline-0 focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal'
-                    type='text'
-                    placeholder='HER'
-                    value={her}
-                    onChange={e => SetHer(e.target.value)}
+                </div>
+                <div className="mb-6">
+                  <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"  
+                  type='text'
+                  placeholder="Her name"
+                  value={her} 
+                  onChange={e => SetHer(e.target.value)}
                   />
-
-
-                  <button
-                  type='submit'
-                  className='bg-blue-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded-full'
-                  disabled={butState()}
-                  >show me
+                </div>
+                <div className="flex items-center justify-between">
+                  <button className="bg-blue-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" 
+                  type="submit"
+                  disabled={butState()}>
+                    Show me
                   </button>
-
-                </form>
+                </div>  
+            </form>
           </div>
+
         </div>
-
-
-          <h1 className='text-center'>{result}</h1>
+        <h1 className='text-center'>{result}</h1>
     </div>
   );
 }
