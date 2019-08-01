@@ -30,31 +30,35 @@ function App() {
             
            switch(len%6){
              case 0:
-             SetResult('FRIENDS');
+             SetResult('NO MATCH!');//;
              break;
 
              case 1:
-              SetResult('LOVERS');
+              SetResult('FRIENDS');
              break;
 
              case 2:
-              SetResult('ACQUAINTANCE');
+              SetResult('LOVERS');
              break;
 
              case 3:
-              SetResult('MARRIED');
+              SetResult('ACQUAINTANCE');
              break;
 
              case 4:
-              SetResult('ENEMIES');
+              SetResult('MARRIED');
              break;
 
              case 5:
-              SetResult('SIBLINGS');
+              SetResult('ENEMIES');
+             break;
+            
+             case 6:
+               SetResult('SIBLINGS')
              break;
 
              default: 
-             SetResult('NO MATCH!');
+             SetResult('error');
            }
            console.log(result);
            
