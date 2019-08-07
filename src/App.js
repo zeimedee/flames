@@ -75,7 +75,7 @@ function App() {
   const butState = () => {
     if( him === '' || her === ''){
         return true;
-    }else{ console.log('post');
+    }else{ 
     }
 }
 
